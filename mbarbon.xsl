@@ -150,16 +150,14 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="haran" />
-    <meta name="generator" content="GNU Emacs" />
+    <meta name="generator" content="GNU Emacs &amp; xsltproc" />
     <meta name="description" content="Mattia Barbon home page" />
     <meta name="keywords" content="Mattia Barbon home page" />
     <meta name="verify-v1" content="DB9W6kq1fB+DDEO3OV2hrHbQGrYcXSSs/Xg+oEAN5Xo=" />
     <link rel="stylesheet" type="text/css" href="css/bluehaze.css" title="Blue Haze stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/color-scheme.css" title="Blue Haze stylesheet" />
-<!--
-    <link href="http://wxperl.eu/wxperl.rss" rel="alternate"
-          type="application/rss+xml" title="wxPerl news" />
--->
+    <link href="stuff.rss" rel="alternate"
+          type="application/rss+xml" title="Stuff happens" />
     <title>Mattia Barbon</title>
   </head>
 
