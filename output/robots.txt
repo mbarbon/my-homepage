@@ -1,0 +1,5 @@
+# /robots.txt file for http://barbon.org/
+User-agent: *
+Disallow: /x/
+Disallow: /wxperl/0.*/wxWidgets
+Disallow: /web/fileadmin/
