@@ -1,6 +1,6 @@
 #!/usr/bin/make
 
-OUTDIR=../site
+OUTDIR=../site/web
 HTML=$(OUTDIR)/index.html $(OUTDIR)/personal.html $(OUTDIR)/programming.html \
      $(OUTDIR)/amilo.html
 XSLT=xsltproc --xinclude
