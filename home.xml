@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<home xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <item>
+    <title>Current position</title>
+    <anchor>position</anchor>
+    <content>
+      <xhtml:p>Since december 2005 I work for DadaMobile as a full-time employee.</xhtml:p>
+      <xhtml:p>I am still willing to accept short-term non-full-time assignments. You can find here my <xhtml:a href="../mbarbon_en.pdf">Curriculum Vitae</xhtml:a> (<xhtml:a href="../mbarbon_it.pdf">Italian version</xhtml:a>).</xhtml:p>
+    </content>
+  </item>
+
+  <item>
+    <title>Bio sketch</title>
+    <anchor>bio-sketch</anchor>
+    <content>
+      <xhtml:p>I was born in Treviso (Italy, near Venice) January the 8th, 1979.</xhtml:p>
+      <xhtml:p>I obtained the &quot;Laurea Specialistica in Informatica&quot;, roughly equivalent to a MSc in Computer Science, October the 10th, 2003.</xhtml:p>
+      <xhtml:p>I work in IT as a developer. In my free time (which is becoming less and less...) I participate to various Open Source projects.</xhtml:p>
+      </content>
+  </item>
+
+  <item>
+    <title>News</title>
+    <anchor>news</anchor>
+    <content><short-news-items /></content>
+  </item>
+
+  <item>
+    <title>Contact</title>
+    <anchor>contact</anchor>
+    <content>
+      <xhtml:p>You can mail me at <xhtml:a href="mailto:mattia.barbon@libero.it">mattia.barbon at libero dot it</xhtml:a>, <xhtml:a href="mailto:mbarbon@cpan.org">mbarbon at cpan dot org</xhtml:a> and <xhtml:a href="mailto:mbarbon@users.sourceforge.net">mbarbon at users dot sourceforge dot net</xhtml:a>.<xhtml:br />
+      <xhtml:b>Skype</xhtml:b>: mattia.barbon.<xhtml:br />
+      <xhtml:b>Yahoo! Messenger</xhtml:b>: mattiabarbon.<xhtml:br />
+      <xhtml:b>MSN Messenger</xhtml:b>: mbarbon@cpan.org.<xhtml:br /></xhtml:p>
+    </content>
+  </item>
+</home>

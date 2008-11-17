@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+
+<!--
+  eacute e9
+  agrave e0
+  euml   eb
+  egrave e8
+-->
+
+<books xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <book author="Jack London"
+        title="The Call of the Wild, White Fang and Other Stories"
+        read="reading" />
+  <book author="Philip Pullman"
+        title="Il cannocchiale d'ambra"
+        read="2008" />
+
+<book title="The Picture of Dorian Gray" author="Oscar Wilde" read="2008"/>
+<book title="La lama sottile" author="Philip Pullman" read="2008"/>
+<book title="La f&#xe9;e carabine" author="Daniel Pennac" read="2008"/>
+<book title="Aux fruits de la passion" author="Daniel Pennac" read="2008"/>
+<book title="Il castello magico di Howl" author="Diana Wynne Jones" read="2008"/>
+<book title="Zazie dans le m&#xe9;tro" author="Raymond Queneau" read="2008"/>
+<book title="Ving ans après" author="Alexandre Dumas" read="2008"/>
+<book title="Il sosia" author="Fëdor M. Dostoevskij" read="2008"/>
+<book title="For Whom the Bell Tolls" author="Ernest Hemingway" read="2007"/>
+<book title="La foresta dei pigmei" author="Isabel Allende" read="2007"/>
+<book title="La citt&#xe0; delle bestie" author="Isabel Allende" read="2007"/>
+<book title="Cristo si &#xe8; fermato a Eboli" author="Carlo Levi" read="2007"/>
+<book title="Il regno del drago d'oro" author="Isabel Allende" read="2007"/>
+<book title="Life, the universe and everything" author="Douglas Adams" read="2007"/>
+<book title="Mansfield Park" author="Jane Austen" read="2007"/>
+<book title="Il processo" author="Franz Kafka" read="2007"/>
+<book title="Complete Short Fiction" author="Oscar WIlde" read="2007"/>
+<book title="L'Aleph" author="Jorge Luis Borges" read="2007"/>
+<book title="Do Androids Dream of Electric Sheep?" author="Philip K. Dick" read="2007"/>
+<book title="La cousine Bette" author="Honor&#xe9; de Balzac" read="2007"/>
+<book title="Balzac e la piccola sarta cinese" author="Dai Sijie" read="2007"/>
+<book title="Signori bambini" author="Daniel Pennac" read="2007"/>
+<book title="Moby Dick" author="Herman Melville" read="2007"/>
+<book title="Harry Potter and the Deathly Hallows" author="J. K. Rowling" read="2007"/>
+<book title="Ti con zero" author="Italo Calvino" read="2007"/>
+<book title="The Old Man and the Sea" author="Ernest Hemingway" read="2007"/>
+<book title="Nineteen Eighty-Four" author="George Orwell" read="2007"/>
+<book title="La Lunga Marcia" author="Stephen King" read="2007"/>
+<book title="Ubik" author="Philip K. Dick" read="2007"/>
+<book title="I fratelli Karamazov" author="Fëdor M. Dostoevskij" read="2007"/>
+<book title="Le cronache di Narnia" author="C. S. Lewis" read="2007"/>
+<book title="Tree and Leaf" author="J. R. R. Tolkien" read="2006"/>
+<book title="Niente e così sia" author="Oriana Fallaci" read="2006"/>
+<book title="The Complete Robot" author="Isaac Asimov" read="2006"/>
+<book title="Animal Farm" author="George Orwell" read="2006"/>
+<book title="Momo" author="Michael Ende" read="2006"/>
+<book title="Northern Lights (His Dark Materials)" author="Philip Pullman" read="2006"/>
+<book title="Jingo" author="Terry Pratchett" read="2006"/>
+<book title="La Peau de chagrin" author="Honoré de Balzac" read="2006"/>
+<book title="Feet of Clay" author="Terry Pratchett" read="2006"/>
+<book title="La peste" author="Albert Camus" read="2006"/>
+<book title="Maskerade" author="Terry Partchett" read="2006"/>
+<book title="La Chartreuse de Parme" author="Stendhal" read="2006"/>
+<book title="Night Watch" author="Terry Pratchett" read="2006"/>
+<book title="Le cosmicomiche" author="Italo Calvino" read="2006"/>
+<book title="Lords and Ladies" author="Terry Pratchett" read="2006"/>
+<book title="Vol de nuit" author="Antoine de Saint-Exupéry" read="2006"/>
+<book title="Going Postal" author="Terry Pratchett" read="2006"/>
+<book title="Le petit prince" author="Antoine de Saint-Exupéry" read="2006"/>
+<book title="The House at Pooh Corner" author="A. A. Milne" read="2005"/>
+<book title="The Hobbit" author="J. R. R. Tolkien" read="2005"/>
+<book title="Eric" author="Terry Pratchett" read="2005"/>
+<book title="Moving Pictures" author="Terry Pratchett" read="2005"/>
+<book title="Interesting Times" author="Terry Pratchett" read="2005"/>
+<book title="The Last Continent" author="Terry Pratchett" read="2005"/>
+<book title="Thief of Time" author="Terry Pratchett" read="2005"/>
+<book title="Harry Potter and the Half-Blood Prince" author="J. K. Rowling" read="2005"/>
+<book title="The Restaurant at the End of the Universe" author="Douglas Adams" read="2005"/>
+<book title="The Hitchhiker's Guide to the Galaxy" author="Douglas Adams" read="2005"/>
+<book title="Les Trois Mousquetaires" author="Alexandre Dumas" read="2005"/>
+<book title="Fahrenheit 451" author="Ray Bradbury" read="2005"/>
+<book title="Pyramids" author="Terry Pratchett" read="2005"/>
+<book title="Orlando Furioso" author="Ludovico Ariosto" read="2005"/>
+<book title="La barca nel bosco" author="Paola Mastrocola" read="2005"/>
+<book title="Sei pezzi meno facili" author="Richard Feynman" read="2005"/>
+<book title="Il deserto dei Tartari" author="Dino Buzzati" read="2005"/>
+<book title="Il mondo nuovo" author="Aldous Huxley" read="2005"/>
+<book title="Tonio Kröger" author="Thomas Mann" read="2005"/>
+<book title="Generations of love" author="Matteo B. Bianchi" read="2005"/>
+<book title="The Lord of the Rings" author="J. R. R. Tolkien (for the 10th time or so)" read="2005"/>
+<book title="Eutifrone, Apologia, Critone, Fedone" author="Platone" read="2005"/>
+<book title="Cratilo" author="Platone" read="2004"/>
+<book title="La scuola raccontata al mio cane" author="Paola Mastrocola" read="2004"/>
+<book title="Stupidi uomini bianchi" author="Michael Moore" read="2004"/>
+<book title="Jane Eyre" author="Charlotte Bront&#xeb;" read="2004"/>
+<book title="Mort - Reaper Man - Soul Music" author="Terry Pratchett" read="2004"/>
+<book title="The Light Fantastic" author="Terry Pratchett" read="2004"/>
+<book title="Persuasion" author="Jane Austen" read="2004"/>
+<book title="The Colour of Magic" author="Terry Pratchett" read="2004"/>
+<book title="Guards! Guards!" author="Terry Pratchett" read="2004"/>
+<book title="Dude, Where's My Country?" author="Michael Moore" read="2004"/>
+<book title="La Rabbia e l'Orgoglio" author="Oriana Fallaci" read="2004"/>
+<book title="Skeleton Crew" author="Stephen King" read="2004"/>
+<book title="The Silmarillion" author="J. R. R. Tolkien (for the 4th time)" read="2004"/>
+<book title="Men at Arms" author="Terry Pratchett" read="2004"/>
+<book title="Northanger Abbey" author="Jane Austen" read="2004"/>
+<book title="Il Sistema Periodico" author="Primo Levi" read="2004"/>
+<book title="La ricerca onirica dello sconosciuto Kadath" author="H. P. Lovecraft" read="2004"/>
+<book title="Mystery Tales" author=" E. A. Poe" read="2004"/>
+<book title="Small Gods" author="Terry Pratchett" read="2004"/>
+<book title="Ivanhoe" author="Walter Scott" read="2004"/>
+<book title="Notre-Dame de Paris" author="Victor Hugo" read="2004"/>
+<book title="Hogfather" author="Terry Pratchett" read="2004"/>
+<book title="Sense and Sensibility" author="Jane Austen" read="2004"/>
+<book title="Naif.Super" author="Erlend Loe" read="2004"/>
+<book title="Il mio pensiero" author="Bertrand Russell" read="2003"/>
+<book title="Harry Potter and the Order of the Phoenix" author="J. K. Rowling" read="2003"/>
+<book title="Insciallah" author="Oriana Fallaci" read="2003"/>
+<book title="Emma" author="Jane Austen" read="2003"/>
+<book title="The Scarlett Letter" author="Nathaniel Hawthorne" read="2003"/>
+<book title="Pride and Prejudice" author="Jane Austen" read="2003"/>
+<book title="Through the Looking Glass" author="Lewis Carroll" read="2003"/>
+<book title="Alice's Adventures in Wonderland" author="Lewis Carroll" read="2003"/>
+
+</books>

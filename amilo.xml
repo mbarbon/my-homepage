@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+
+<amilo xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <item>
+    <title>Hardware</title>
+    <anchor>hardware</anchor>
+    <content>
+      <xhtml:table>
+	<xhtml:tr>
+	  <xhtml:td>AMD Turion MT-28 1.6 Ghz </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> had to manually load powernow-k8 module</xhtml:td>  
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td>15 inch TFT Display, 1024x768 pixels </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> selected generic flat panel 1024x768</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td>SIS M760 integrated video card </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> selected &quot;sis&quot; driver in XFree86 config</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td>2x512 MB </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> -</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td>60 GB IDE hard disk </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> -</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td>Firewire/IEEE1394 </xhtml:td>
+	  <xhtml:td> Not tried </xhtml:td>
+	  <xhtml:td> detected by kernel, probably works</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td>Integrated Network Card </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> -</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td><xhtml:a href="#modem">Internal 56k Modem</xhtml:a> </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> using ALSA + Intel 8x0 driver + slmodemd</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td>DVD writer </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> -</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td><xhtml:a href="#wireless">Internal WLAN</xhtml:a> </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> -</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td>Battery </xhtml:td>
+	  <xhtml:td> Works </xhtml:td>
+	  <xhtml:td> added ec_burst=1 to kernel parameters</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td><xhtml:a href="#touchpad">Touchpad</xhtml:a> </xhtml:td>
+	  <xhtml:td> In progress </xhtml:td>
+	  <xhtml:td> some remaining problems</xhtml:td>
+	</xhtml:tr>
+	<xhtml:tr>
+	  <xhtml:td><xhtml:a href="#power">Power management</xhtml:a> </xhtml:td>
+	  <xhtml:td> In progress </xhtml:td>
+	  <xhtml:td> mostly works</xhtml:td>
+	</xhtml:tr>
+      </xhtml:table>
+    </content>
+  </item>
+
+  <item>
+    <title>Software</title>
+    <anchor>software</anchor>
+    <content>
+      <xhtml:p>Debian GNU/Linux 3.1 &quot;Sarge&quot; for AMD64 upgraded to 4.0 &quot;Etch&quot;</xhtml:p>
+      <xhtml:p>Installed an i386 chroot as per instructions in <xhtml:a href="https://alioth.debian.org/docman/view.php/30192/21/debian-amd64-howto.html#id271960">The Debian GNU/Linux AMD64 HOW-TO</xhtml:a>. Using self-compiled 2.6.27 kernel.</xhtml:p>
+    </content>
+  </item>
+
+  <item>
+    <title>Modem</title>
+    <anchor>modem</anchor>
+    <content>
+      <xhtml:p>I downloaded the <xhtml:a href="http://www.xs4all.nl/~pjl/slmodemd/slmodemd-2.9.9e_pre1_alsa-4.FC4.LC.x86_64.rpm ">binary packages for x86_64/Fedora Core 4</xhtml:a> and converted them to DEB format using Alien.</xhtml:p>
+      <xhtml:p>Debian correctly identifies the soundcard and loads the snd-intel8x0 and snd-intel8x0m drivers and the ac97 codecs.</xhtml:p>
+      <xhtml:p>To use the modem I need to run slmodemd --country=ITALY --alsa --daemon and change pppd config to use /dev/ttySL0 (wvdial does this automatically).</xhtml:p>
+    </content>
+  </item>
+
+  <item>
+    <title>Touchpad</title>
+    <anchor>touchpad</anchor>
+    <content>
+      <xhtml:p>For Debian the driver is packaged as xfree86-driver-synaptics; installation instructions are under /usr/share/doc/xfree86-driver-synaptics/. As an alternative, you can <xhtml:a href="http://web.telia.com/~u89404340/touchpad/files/">download the sources for the Synaptics driver</xhtml:a>; it is then necessary to modify XF86Config/xorg.conf <xhtml:a href="http://web.telia.com/~u89404340/touchpad/xorg.conf">as demonstrated here</xhtml:a>.</xhtml:p>
+    </content>
+  </item>
+
+  <item>
+    <title>Power management</title>
+    <anchor>power</anchor>
+    <content>
+      <xhtml:p>Suspend to disk (S4) works using the stock 2.6.15 kernel. There seem not to be any problems.</xhtml:p>
+
+      <xhtml:p>Suspend to RAM (S3) works after adding acpi_sleep=s3_bios,s3_mode to the kernel boot parameters. The notebook only wakes up when pressing the power button hence I had to substitute the poweroff.sh script included with acpid as packaged by Debian.</xhtml:p>
+      <xhtml:p>My /usr/bin/suspend.ram script (to be run as root):</xhtml:p>
+      <xhtml:pre>
+#!/bin/sh
+
+touch /var/run/suspend.ram
+echo -n mem > /sys/power/state
+</xhtml:pre>
+      <xhtml:p>My /etc/acpi/powerbtn.sh script:</xhtml:p>
+      <xhtml:pre>
+#!/bin/sh
+
+if test -e /var/run/suspend.ram; then
+    ( /bin/sleep 5; /bin/rm -rf /var/run/suspend.ram ) &amp;
+else
+    /sbin/shutdown -h now "Power button pressed"
+endif 
+      </xhtml:pre>
+      <xhtml:p>Standby (S1) works with 2.6.16/2.6.17 kernels. Sometimes the notebook enters standby when the lid is closed even if attached to AC (happened with 2.6.12, seems to be fixed in 2.6.15).</xhtml:p>
+      <xhtml:p>DPMS turns off the display but fails to turn off the backlight hence the screen becomes completely white (and I suspect there is near-zero power saving).</xhtml:p>
+    </content>
+  </item>
+
+  <item>
+    <title>Wireless</title>
+    <anchor>wireless</anchor>
+    <content>
+      <xhtml:p>Works using  kernel 2.6.15.5, ndiswrapper 1.10, <xhtml:a href="ftp://ftp.support.acer-euro.com/notebook/aspire_3020_5020/driver/winxp64bit/">64 bit Windows drivers for ACER Aspire</xhtml:a>.</xhtml:p>
+      <xhtml:p>Not tried with a 32 bit OS but it should work. It did not work with older kernels/ndiswrapper versions.</xhtml:p>
+    </content>
+  </item>
+</amilo>

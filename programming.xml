@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<programming xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <item>
+    <title>wxPerl</title>
+    <anchor>wxperl</anchor>
+    <content>
+      <xhtml:p><xhtml:a href="http://wxperl.sourceforge.net/">The Perl bindings to wxWidgets</xhtml:a>.</xhtml:p>
+      <xhtml:p>I am the original and (still) the only developer.</xhtml:p>
+    </content>
+  </item>
+
+  <item>
+    <title>wxWidgets</title>
+    <anchor>wxwidgets</anchor>
+    <content>
+      <xhtml:p>A <xhtml:a href="http://www.wxwidgets.org">cross-platform GUI toolkit</xhtml:a> with native look and feel.</xhtml:p>
+      <xhtml:p>I am member of the <xhtml:a href="http://www.wxwidgets.org/whowhat.htm">development team</xhtml:a> with commit privileges; I keep the Motif port from bit-rotting, and worked towards STL-compatibility for the toolkit.</xhtml:p>
+    </content>
+  </item>
+
+  <item>
+    <title>Perl</title>
+    <anchor>perl</anchor>
+    <content>
+      <xhtml:p>One of the programming languages i like most.</xhtml:p>
+      <xhtml:p>I <xhtml:a href="http://search.cpan.org/~mbarbon/">maintain</xhtml:a> some <xhtml:a href="http://www.cpan.org/">CPAN</xhtml:a> modules.</xhtml:p>
+
+      <subitem>
+        <title>ExtUtils::FakeConfig</title>
+        <content>
+          <xhtml:p>A nice hack. To compile Perl modules the same compiler with which Perl was compiled is required. With <xhtml:a href="http://search.cpan.org/~mbarbon/ExtUtils-FakeConfig/">ExtUtils::FakeConfig </xhtml:a> you can compile modules for ActivePerl on Win32 using the free <xhtml:a href="http://www.mingw.org/">MinGW GCC</xhtml:a> compiler.</xhtml:p>
+        </content>
+      </subitem>
+
+      <subitem>
+        <title>Module::Info</title>
+        <content>
+          <xhtml:p>A <xhtml:a href="http://search.cpan.org/~mbarbon/Module-Info/">module to collect various information about other modules</xhtml:a>.</xhtml:p>
+          <xhtml:p>I took it over from Michael G. Schwern and am just keeping it working, without adding major features.</xhtml:p>
+        </content>
+      </subitem>
+
+      <subitem>
+        <title>App::Packer</title>
+        <anchor>app-packer</anchor>
+        <content>
+          <xhtml:p>This module is discontinued!</xhtml:p>
+          <xhtml:p>It was a framework for application packing; I started it about  at the same time as PAR started; PAR was however much better, more maintained, and having two free  packers for Perl applications was just  stupid, so I dropped it. You  can still find it on CPAN.</xhtml:p>
+        </content>
+      </subitem>
+
+    </content>
+  </item>
+</programming>
