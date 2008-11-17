@@ -2,7 +2,7 @@
 
 OUTDIR=../site/web
 HTML=$(OUTDIR)/index.html $(OUTDIR)/personal.html $(OUTDIR)/programming.html \
-     $(OUTDIR)/amilo.html
+     $(OUTDIR)/amilo.html $(OUTDIR)/all_news.html
 XSLT=xsltproc --xinclude
 XMLCHECKDTD=xmllint --catalogs --loaddtd --valid --noout
 XMLCHECK=xmllint --catalogs --noout
@@ -24,6 +24,9 @@ $(OUTDIR)/programming.html:
 
 $(OUTDIR)/amilo.html:
 	$(XSLT) -o $@ --stringparam itemnode amilo simple.xsl main.xml
+
+$(OUTDIR)/all_news.html:
+	$(XSLT) -o $@ --stringparam itemnode all-news simple.xsl main.xml
 
 .SUFFIXES: .xml .xsl .html
 

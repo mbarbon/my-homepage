@@ -21,12 +21,6 @@
   </item>
 
   <item>
-    <title>News</title>
-    <anchor>news</anchor>
-    <content><short-news-items /></content>
-  </item>
-
-  <item>
     <title>Contact</title>
     <anchor>contact</anchor>
     <content>
@@ -34,6 +28,15 @@
       <xhtml:b>Skype</xhtml:b>: mattia.barbon.<xhtml:br />
       <xhtml:b>Yahoo! Messenger</xhtml:b>: mattiabarbon.<xhtml:br />
       <xhtml:b>MSN Messenger</xhtml:b>: mbarbon@cpan.org.<xhtml:br /></xhtml:p>
+    </content>
+  </item>
+
+  <item>
+    <title>Stuff happens</title>
+    <anchor>news</anchor>
+    <content>
+      <short-news-items count="5"/>
+      <xhtml:p><xhtml:a href="all_news.html">All news...</xhtml:a></xhtml:p>
     </content>
   </item>
 </home>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<blob xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <item>
+    <title>Got sick of Typo 3</title>
+    <date rfc822="Mon, 17 Nov 2008 13:48:18 +0100">17 nov 2008</date>
+    <id>2008-11-sick-of-typo3</id>
+    <description>
+Finally switched the site from Typo 3.
+    </description>
+    <content>
+Not that Typo 3 is bad, but using it for this site is like killing a
+fly with a nuclear bomb: messy.  As a first step the site is just XML
++ XSLT; maybe I will add support for Wiki (or something like it)
+later.
+    </content>
+  </item>
+
+  <item>
+    <date rfc822="17 Aug 2007 00:00:00 +0200">17 august 2007</date>
+    <description>I am available on MSN Messenger as mbarbon@cpan.org</description>
+  </item>
+  <item>
+    <date rfc822="29 Jum 2007 00:00:00 +0200">29 june 2005</date>
+    <description>I went hotspot-hunting on the Lungarno with my shiny new MacBook; I officially feel a nerd...</description>
+  </item>
+  <item>
+    <date rfc822="17 Feb 2007 00:00:00 +0100">17 february 2007</date>
+    <description>finally updated my <xhtml:a href="personal.html#reading">reading page</xhtml:a></description>
+  </item>
+  <item>
+    <date rfc822="02 Oct 2006 00:00:00 +0200">2 october 2006</date>
+    <description>CV updated to the Europass format</description>
+  </item>
+  <item>
+    <date rfc822="26 May 2006 00:00:00 +0200">26 may 2006</date>
+    <description><xhtml:a href="http://maps.google.com/?q=11.32023E+43.841217N">Where I live</xhtml:a> on Google maps</description>
+  </item>
+  <item>
+    <date rfc822="24 Nov 2005 00:00:00 +0100">24 november 2005</date>
+    <description>I created a page about <xhtml:a href="amilo.html">installing Linux on Fujitsu-Siemens A7645</xhtml:a></description>
+  </item>
+  <item>
+    <date rfc822="29 Oct 2005 00:00:00 +0100">29 october 2005</date>
+    <description>I found a decent place to live in Firenze</description>
+  </item>
+  <item>
+    <date rfc822="25 Aug 2005 00:00:00 +0200">25 august 2005</date>
+    <description>I am available on Yahoo! Messenger as mattiabarbon</description>
+  </item>
+  <item>
+    <date rfc822="23 Aug 2005 00:00:00 +0200">23 august 2005</date>
+    <description>I will be in Portugal from august the 29th to september the 7th. See you at YAPC!</description>
+  </item>
+  <item>
+    <date rfc822="29 Apr 2005 00:00:00 +0200">29 april 2005</date>
+    <description><xhtml:a href="http://www.apple.com/macosx/">Mac OS X 10.4</xhtml:a> bundles a copy of <xhtml:a href="programming.html#wxperl">wxPerl</xhtml:a>!</description>
+  </item>
+  <item>
+    <date rfc822="12 Feb 2005 00:00:00 +0100">12 february 2005</date>
+    <description>I subscribed to <xhtml:a href="http://www.skype.com/">Skype</xhtml:a>. <xhtml:a href="callto:mattia.barbon">Skype me</xhtml:a>!</description>
+  </item>
+  <item>
+    <date rfc822="9 Oct 2004 00:00:00 +0200">9 october 2004</date>
+    <description><xhtml:a href="http://www.codejam.org/">Italian Code Jam</xhtml:a>! Lots of fun, talks by Larry and Allison Randal</description>
+  </item>
+</blob>
+

@@ -8,72 +8,16 @@
 <xi:include href="books.xml" />
 <xi:include href="programming.xml" />
 <xi:include href="amilo.xml" />
+<xi:include href="blob.xml" />
 
-<short-news>
+<all-news>
   <item>
-    <date rfc822="17 Aug 2007 00:00:00 +0200">17 august 2007</date>
-    <content>I am available on MSN Messenger as mbarbon@cpan.org</content>
-  </item>
-  <item>
-    <date rfc822="29 Jum 2007 00:00:00 +0200">29 june 2005</date>
-    <content>I went hotspot-hunting on the Lungarno with my shiny new MacBook; I officially feel a nerd...</content>
-  </item>
-  <item>
-    <date rfc822="17 Feb 2007 00:00:00 +0100">17 february 2007</date>
-    <content>finally updated my <xhtml:a href="personal.html#reading">reading page</xhtml:a></content>
-  </item>
-  <item>
-    <date rfc822="02 Oct 2006 00:00:00 +0200">2 octover 2006</date>
-    <content>CV updated to the Europass format</content>
-  </item>
-  <item>
-    <date rfc822="26 May 2006 00:00:00 +0200">26 may 2006</date>
-    <content><xhtml:a href="http://maps.google.com/?q=11.32023E+43.841217N">Where I live</xhtml:a> on Google maps</content>
-  </item>
-  <item>
-    <date rfc822="24 Nov 2005 00:00:00 +0100">24 november 2005</date>
-    <content>I created a page about <xhtml:a href="amilo.html">installing Linux on Fujitsu-Siemens A7645</xhtml:a></content>
-  </item>
-  <item>
-    <date rfc822="29 Oct 2005 00:00:00 +0100">29 october 2005</date>
-    <content>I found a decent place to live in Firenze</content>
-  </item>
-  <item>
-    <date rfc822="25 Aug 2005 00:00:00 +0200">25 august 2005</date>
-    <content>I am available on Yahoo! Messenger as mattiabarbon</content>
-  </item>
-  <item>
-    <date rfc822="23 Aug 2005 00:00:00 +0200">23 august 2005</date>
-    <content>I will be in Portugal from august the 29th to september the 7th. See you at YAPC!</content>
-  </item>
-  <item>
-    <date rfc822="29 Apr 2005 00:00:00 +0200">29 april 2005</date>
-    <content><xhtml:a href="http://www.apple.com/macosx/">Mac OS X 10.4</xhtml:a> bundles a copy of <xhtml:a href="programming.html#wxperl">wxPerl</xhtml:a>!</content>
-  </item>
-  <item>
-    <date rfc822="12 Feb 2005 00:00:00 +0100">12 february 2005</date>
-    <content>I subscribed to <xhtml:a href="http://www.skype.com/">Skype</xhtml:a>. <xhtml:a href="callto:mattia.barbon">Skype me</xhtml:a>!</content>
-  </item>
-  <item>
-    <date rfc822="9 Oct 2004 00:00:00 +0200">9 october 2004</date>
-    <content><xhtml:a href="http://www.codejam.org/">Italian Code Jam</xhtml:a>! Lots of fun, talks by Larry and Allison Randal</content>
-  </item>
-</short-news>
-
-<news>
-  <item>
-    <title>Documentation updated</title>
-    <date rfc822="Thu, 01 May 2008 16:48:18 +0200">May 01, 2008</date>
-    <id>2008-05-wxperl-documentation-updated</id>
-    <description>
-Updated documentation created from wxWidgets 2.8.7 manual is now available
-from <xhtml:a href="download.html#Documentation">the download page</xhtml:a>.
-    </description>
+    <title>News</title>
+    <anchor>news</anchor>
     <content>
-Updated documentation created from wxWidgets 2.8.7 manual is now available
-from <xhtml:a href="download.html#Documentation">the download page</xhtml:a>.
+      <news-items count="1000" />
     </content>
   </item>
-</news>
+</all-news>
 
 </data>

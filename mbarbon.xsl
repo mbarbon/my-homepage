@@ -207,33 +207,57 @@
 </xsl:template>
 
 <!-- news item -->
-<xsl:template match="news/item">
+<xsl:template name="news-item">
   <dt>
     <xsl:if test="id">
       <a>
         <xsl:attribute name="name"><xsl:copy-of select="id" /></xsl:attribute>
       </a>
     </xsl:if>
-  <xsl:value-of select="date" /></dt> 
-  <dd><xsl:apply-templates select="content" /></dd>
+    <xsl:value-of select="date" />
+    <xsl:if test="title">
+      - <xsl:value-of select="title" />
+    </xsl:if>
+  </dt> 
+  <dd>
+    <xsl:choose>
+      <xsl:when test="content"><xsl:apply-templates select="content" /></xsl:when>
+      <xsl:otherwise><xsl:apply-templates select="description" /></xsl:otherwise>
+    </xsl:choose>
+  </dd>
+</xsl:template>
+
+<!-- insert full news list -->
+<xsl:template match="news-items">
+  <dl>
+    <xsl:variable name="count"><xsl:value-of select="@count" /></xsl:variable>
+    <xsl:for-each select="/data/blob/item[position() &lt;= $count]">
+      <xsl:call-template name="news-item" />
+    </xsl:for-each>
+  </dl>
 </xsl:template>
 
 <!-- short news item -->
-<xsl:template match="short-news/item">
+<xsl:template name="short-news-item">
   <li>
+    <xsl:value-of select="date" />:
+    <xsl:apply-templates select="description" />
     <xsl:if test="id">
       <a>
-        <xsl:attribute name="name"><xsl:copy-of select="id" /></xsl:attribute>
+        <xsl:attribute name="href">all_news.html#<xsl:copy-of select="id" /></xsl:attribute>
+        More...
       </a>
     </xsl:if>
-  <xsl:value-of select="date" />:
-  <xsl:apply-templates select="content" /></li>
+  </li>
 </xsl:template>
 
 <!-- insert short news list -->
 <xsl:template match="short-news-items">
   <ul>
-    <xsl:apply-templates select="/data/short-news/item" />
+    <xsl:variable name="count"><xsl:value-of select="@count" /></xsl:variable>
+    <xsl:for-each select="/data/blob/item[position() &lt;= $count]">
+      <xsl:call-template name="short-news-item" />
+    </xsl:for-each>
   </ul>
 </xsl:template>
 
