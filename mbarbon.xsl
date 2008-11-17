@@ -107,7 +107,7 @@
 </xsl:template>
 
 <!-- templates for header and footer -->
-<xsl:template name="wxperl-header">
+<xsl:template name="mbarbon-header">
   <xsl:param name="path" select="'.'" />
 
   <div id="top"></div>
@@ -124,7 +124,7 @@
   </div>
 </xsl:template>
 
-<xsl:template name="wxperl-footer">
+<xsl:template name="mbarbon-footer">
   <xsl:param name="path" select="'.'" />
 
   <div id="footer">
@@ -165,7 +165,7 @@
 
   <body>  
     <!-- ###### Header ###### -->
-    <xsl:call-template name="wxperl-header" />
+    <xsl:call-template name="mbarbon-header" />
 
     <!-- ###### Side Boxes ###### -->
 
@@ -182,7 +182,7 @@
     </div>
     
     <!-- ###### Footer ###### -->
-    <xsl:call-template name="wxperl-footer" />
+    <xsl:call-template name="mbarbon-footer" />
 
   </body>
 </html>
