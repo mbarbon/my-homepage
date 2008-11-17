@@ -14,16 +14,16 @@ crlf2lf:
 	find $(OUTDIR) -name "*.html" | xargs dos2unix
 
 $(OUTDIR)/index.html:
-	$(XSLT) -o $@ home.xsl main.xml
+	$(XSLT) -o $@ --stringparam itemnode home home.xsl main.xml
 
 $(OUTDIR)/personal.html:
-	$(XSLT) -o $@ personal.xsl main.xml
+	$(XSLT) -o $@ --stringparam itemnode personal home.xsl main.xml
 
 $(OUTDIR)/programming.html:
-	$(XSLT) -o $@ programming.xsl main.xml
+	$(XSLT) -o $@ --stringparam itemnode programming home.xsl main.xml
 
 $(OUTDIR)/amilo.html:
-	$(XSLT) -o $@ amilo.xsl main.xml
+	$(XSLT) -o $@ --stringparam itemnode amilo home.xsl main.xml
 
 # $(OUTDIR)/sshot01.html: sshots.xml sshots.xsl wxperl.xsl
 # 	$(XSLT) --stringparam page 1 -o $@ sshots.xsl sshots.xml

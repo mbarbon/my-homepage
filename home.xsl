@@ -11,12 +11,12 @@
 
 <xsl:template name="lateral-menu">
   <xsl:call-template name="page-head-links">
-    <xsl:with-param name="items" select="/data/home/item" />
+    <xsl:with-param name="items" select="/data/*[name() = $itemnode]/item" />
   </xsl:call-template>
   <xsl:call-template name="project-honeypot" />
 </xsl:template>
 
-<xsl:template match="/data/home">
+<xsl:template match="/data/*[name() = $itemnode]">
   <xsl:apply-templates />
 </xsl:template>
 
