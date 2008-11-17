@@ -14,26 +14,17 @@ crlf2lf:
 	find $(OUTDIR) -name "*.html" | xargs dos2unix
 
 $(OUTDIR)/index.html:
-	$(XSLT) -o $@ --stringparam itemnode home home.xsl main.xml
+	$(XSLT) -o $@ --stringparam itemnode home simple.xsl main.xml
 
 $(OUTDIR)/personal.html:
-	$(XSLT) -o $@ --stringparam itemnode personal home.xsl main.xml
+	$(XSLT) -o $@ --stringparam itemnode personal simple.xsl main.xml
 
 $(OUTDIR)/programming.html:
-	$(XSLT) -o $@ --stringparam itemnode programming home.xsl main.xml
+	$(XSLT) -o $@ --stringparam itemnode programming simple.xsl main.xml
 
 $(OUTDIR)/amilo.html:
-	$(XSLT) -o $@ --stringparam itemnode amilo home.xsl main.xml
-
-# $(OUTDIR)/sshot01.html: sshots.xml sshots.xsl wxperl.xsl
-# 	$(XSLT) --stringparam page 1 -o $@ sshots.xsl sshots.xml
-
-test:
-	$(XMLCHECKDTD) applications.xml
-	$(XMLCHECK) main.xml
-	$(XMLCHECKDTD) sshots.xml
-	$(XMLCHECKDTD) tutorial/tutorial.xml
+	$(XSLT) -o $@ --stringparam itemnode amilo simple.xsl main.xml
 
 .SUFFIXES: .xml .xsl .html
 
-$(OUTDIR)/*.html: $(ALL_FILES)
+$(OUTDIR)/*.html: $(ALL_FILES) Makefile
