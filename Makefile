@@ -28,8 +28,8 @@ $(OUTDIR)/all_news.html:
 	$(XSLT) --stringparam itemnode all-news $(XSLT_SIMPLE)
 
 $(OUTDIR)/stuff.rss:
-	$(XSLT) --stringparam itemnode all-news -o $@ news_rss.xsl main.xml
+	$(XSLT) -o $@ news_rss.xsl main.xml
 
 .SUFFIXES: .xml .xsl .html
 
-$(OUTDIR)/*.html: $(ALL_FILES) Makefile
+$(OUTDIR)/*.html $(OUTDIR)/*.rss: $(ALL_FILES) Makefile

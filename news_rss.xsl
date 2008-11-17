@@ -23,7 +23,9 @@
 <!-- news item -->
 <xsl:template match="item">
   <item>
-    <title><xsl:apply-templates select="title" /></title>
+    <xsl:if test="title">
+      <title><xsl:apply-templates select="title" /></title>
+    </xsl:if>
     <description>
       <xsl:choose>
         <xsl:when test="description">
@@ -35,8 +37,9 @@
       </xsl:choose>
     </description>
     <pubDate><xsl:value-of select="date/@rfc822" /></pubDate>
-    <guid>http://wxperl.eu/news.html#<xsl:value-of select="id" /></guid>
-
+    <xsl:if test="id">
+      <guid>http://barbon.org/web/all_news.html#<xsl:value-of select="id" /></guid>
+    </xsl:if>
   </item>
 </xsl:template>
 
