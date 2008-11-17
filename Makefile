@@ -9,6 +9,9 @@ ALL_FILES=*.xml *.xsl
 
 all: $(HTML)
 
+clean:
+	rm -f $(HTML)
+
 crlf2lf:
 	find $(OUTDIR) -name "*.html" | xargs dos2unix
 
