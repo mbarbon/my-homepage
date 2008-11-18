@@ -40,7 +40,9 @@ You can find <xhtml:a href="http://wxperl.eu/ipw2008/">slides and example code</
   </item>
   <item>
     <date rfc822="02 Oct 2006 00:00:00 +0200">2 october 2006</date>
-    <description>CV updated to the Europass format</description>
+    <description>
+      <xhtml:a href="../mbarbon_en.pdf">CV</xhtml:a> updated to the Europass format
+    </description>
   </item>
   <item>
     <date rfc822="26 May 2006 00:00:00 +0200">26 may 2006</date>

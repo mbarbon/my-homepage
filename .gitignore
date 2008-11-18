@@ -1,2 +1,3 @@
 *~
-output/web/
+output/web/*.html
+output/web/*.rss

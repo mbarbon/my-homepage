@@ -12,6 +12,12 @@ all: $(HTML)
 clean:
 	rm -f $(HTML)
 
+archive: all
+	WHERE=`pwd` && cd $(OUTDIR) && tar cjf $$WHERE/web.tar.bz2 * .htaccess
+
+upload: archive
+	perl ../bin/client_hv.pl --file=web.tar.bz2
+
 crlf2lf:
 	find $(OUTDIR) -name "*.html" | xargs dos2unix
 
