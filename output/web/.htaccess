@@ -1,21 +1,21 @@
 RewriteEngine On
  
 RewriteCond %{QUERY_STRING} ^id=2$
-RewriteRule ^index\.php$ /web2/personal.html? [R=301]
+RewriteRule ^index\.php$ /web/personal.html? [R=301]
 
 RewriteCond %{QUERY_STRING} ^id=3$
-RewriteRule ^index\.php$ /web2/index.html? [R=301]
+RewriteRule ^index\.php$ /web/index.html? [R=301]
 
 RewriteCond %{QUERY_STRING} ^id=4$
-RewriteRule ^index\.php$ /web2/programming.html? [R=301]
+RewriteRule ^index\.php$ /web/programming.html? [R=301]
 
 RewriteCond %{QUERY_STRING} ^id=7$
-RewriteRule ^index\.php$ /web2/amilo.html? [R=301]
+RewriteRule ^index\.php$ /web/amilo.html? [R=301]
 
 RewriteCond %{QUERY_STRING} ^id=.*$
-RewriteRule ^index\.php$ /web2/index.html? [R=301]
+RewriteRule ^index\.php$ /web/index.html? [R=301]
 
-Redirect 301 /web2/2/index.html   /web2/personal.html
-Redirect 301 /web2/3/index.html   /web2/index.html
-Redirect 301 /web2/4/index.html   /web2/programming.html
-Redirect 301 /web2/7/index.html   /web2/amilo.html
+Redirect 301 /web/2/index.html   /web/personal.html
+Redirect 301 /web/3/index.html   /web/index.html
+Redirect 301 /web/4/index.html   /web/programming.html
+Redirect 301 /web/7/index.html   /web/amilo.html
