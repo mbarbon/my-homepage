@@ -4,7 +4,7 @@
   <item>
     <title>Got sick of Typo 3</title>
     <date rfc822="Mon, 17 Nov 2008 13:48:18 +0100">17 november 2008</date>
-    <id>2008-11-sick-of-typo3</id>
+    <id>nov-2008-sick-of-typo3</id>
     <description>
 Finally switched the site from Typo 3.
     </description>
@@ -19,7 +19,7 @@ later.
   <item>
     <title>IPW 2008</title>
     <date rfc822="Thu, 18 Sep 2008 09:00:00 +0200">18 september 2008</date>
-    <id>2008-09-ipw</id>
+    <id>sep-2008-ipw</id>
     <description>Presented wxPerl at the Italian Perl Workshop</description>
     <content>
 You can find <xhtml:a href="http://wxperl.eu/ipw2008/">slides and example code</xhtml:a> on <xhtml:a href="http://wxperl.eu/">the wxPerl web site</xhtml:a>
