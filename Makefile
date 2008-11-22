@@ -5,7 +5,7 @@ HTML=$(OUTDIR)/index.html $(OUTDIR)/personal.html $(OUTDIR)/programming.html \
      $(OUTDIR)/amilo.html $(OUTDIR)/all_news.html $(OUTDIR)/stuff.rss
 XSLT=xsltproc --xinclude
 XSLT_SIMPLE= -o $@ simple.xsl main.xml
-ALL_FILES=*.xml *.xsl
+ALL_FILES=*.xml *.xsl *.dtd
 
 all: $(HTML)
 

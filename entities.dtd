@@ -1,4 +1,6 @@
 <!ENTITY egrave "&#xe8;" >
-<!ENTITY euml "&#xeb;" >
+<!ENTITY euml   "&#xeb;" >
 <!ENTITY agrave "&#xe0;" >
 <!ENTITY eacute "&#xe9;" >
+<!ENTITY aacute "&#xe1;" >
+<!ENTITY ntilde "&#xf1;" >

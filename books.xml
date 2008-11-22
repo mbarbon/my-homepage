@@ -16,12 +16,28 @@
         title="La casa in collina"
         read="2008"
         />
+  <book author="Albert Camus"
+        title="La chute"
+        read="2008"
+        />
+  <book author="Blasco Ib&aacute;&ntilde;ez"
+        title="I quattro cavalieri dell'apocalisse"
+        read="2008"
+        />
   <book author="Robert Heinlein"
         title="The Cat Who Walks Through Walls"
         read="2008"
         />
+  <book author="Honor&eacute; de Balzac"
+        title="Un tenebroso affare"
+        read="2008"
+        />
   <book author="Isabel Allende"
         title="Il piano infinito"
+        read="2008"
+        />
+  <book author="Gilbert Keith Chesterton"
+        title="Il club dei mestieri stravaganti"
         read="2008"
         />
   <book author="Virginia Woolf"
@@ -30,6 +46,14 @@
         />
   <book author="Robert Heinlein"
         title="The Moon Is a Harsh Mistress"
+        read="2008"
+        />
+  <book author="Daniel Pennac"
+        title="Au bonheur des ogres"
+        read="2008"
+        />
+  <book author="Nathaniel Hawthorne"
+        title="La casa dei sette abbaini"
         read="2008"
         />
   <book author="Jack London"
