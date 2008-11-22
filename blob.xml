@@ -36,9 +36,9 @@ Finally switched the site from Typo 3.
     </description>
     <content>
 Not that Typo 3 is bad, but using it for this site is like killing a
-fly with a nuclear bomb: messy.  As a first step the site is just XML
-+ XSLT; maybe I will add support for Wiki (or something like it)
-later.
+fly with a nuclear bomb...  As a first step now the site is built using XML
++ XSLT; maybe I will add support for Wiki markup (or reStructuredText,
+or Markdown, ...) later.
     </content>
   </item>
 
