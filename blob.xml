@@ -2,6 +2,32 @@
 
 <blob xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <item>
+    <title>Lost youth</title>
+    <date rfc822="Sat, 22 Nov 2008 22:56:00 +0100">22 november 2008</date>
+    <id>nov-2008-lost-youth</id>
+    <description>
+Found a piece of my youth I had forgot.
+    </description>
+    <content>
+<xhtml:p>Dedicated to Syntax Error.</xhtml:p>
+
+<xhtml:p>Today I found the very first CD I mastered (actually,
+<xhtml:a href="http://giop.net/" target="_blank">Gioppino</xhtml:a>
+mastered it for me using La Fenice).  Apart from various demos,
+modules, the technical manual of the 386 (plain text, with ASCII-art
+graphs!) and assorted stuff, it contains the very first C/C++/Assembly
+programs I wrote back in '96-'97.</xhtml:p>
+
+<xhtml:p>So <xhtml:a href="julia">here it is</xhtml:a> the one I was most
+proud of: 255 bytes displaying an animation of the
+<xhtml:a target="_blank" href="http://en.wikipedia.org/wiki/Julia_set">Julia
+set</xhtml:a>.  It ran pretty smooth back then, under DOS, on my Pentium 100,
+and by the miracles on emulation it still runs pretty smooth as a boot sector
+binary inside a VMWare.</xhtml:p>
+    </content>
+  </item>
+
+  <item>
     <title>Got sick of Typo 3</title>
     <date rfc822="Mon, 17 Nov 2008 13:48:18 +0100">17 november 2008</date>
     <id>nov-2008-sick-of-typo3</id>
