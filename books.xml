@@ -2,12 +2,16 @@
 <!DOCTYPE data SYSTEM "entities.dtd">
 
 <books xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <book author="Simone de Beauvoir"
-        title="Une mort tr&egrave;s douce"
+  <!-- 2008 -->
+  <book author="Philip K. Dick"
+        title="A Maze of Death"
         read="reading"
         />
 
-  <!-- 2008 -->
+  <book author="Simone de Beauvoir"
+        title="Une mort tr&egrave;s douce"
+        read="2008"
+        />
   <book author="Charles Dickens"
         title="David Copperfield"
         read="2008"
