@@ -101,7 +101,7 @@
 </xsl:template>
 
 <xsl:template name="project-honeypot">
-  <xhtml:a href="http://www.projecthoneypot.org?rf=46311">
+  <xhtml:a id="honeypot-logo" href="http://www.projecthoneypot.org?rf=46311">
     <xhtml:img src="../mini_phpot_link.gif" height="31px" width="88px" alt="Stop Spam Harvesters, Join Project Honey Pot" />
   </xhtml:a>
 </xsl:template>
@@ -154,8 +154,9 @@
     <meta name="description" content="Mattia Barbon home page" />
     <meta name="keywords" content="Mattia Barbon home page" />
     <meta name="verify-v1" content="DB9W6kq1fB+DDEO3OV2hrHbQGrYcXSSs/Xg+oEAN5Xo=" />
-    <link rel="stylesheet" type="text/css" href="css/bluehaze.css" title="Blue Haze stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/color-scheme.css" title="Blue Haze stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/bluehaze-mobile.css" title="Blue Haze stylesheet" media="handheld" />
+    <link rel="stylesheet" type="text/css" href="css/bluehaze.css" title="Blue Haze stylesheet" media="tv,projection,print,screen" />
+    <link rel="stylesheet" type="text/css" href="css/color-scheme.css" title="Blue Haze stylesheet" media="all" />
     <link href="stuff.rss" rel="alternate"
           type="application/rss+xml" title="Stuff happens" />
     <title>Mattia Barbon</title>
@@ -169,7 +170,7 @@
 
     <xsl:if test="not(boolean($skip-navigation))">
       <div class="sideBox LHS">
-        <div>This Page</div>
+        <div id="this-page">This Page</div>
           <xsl:call-template name="lateral-menu" />
       </div>
     </xsl:if>

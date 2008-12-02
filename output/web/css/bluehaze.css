@@ -35,8 +35,6 @@
 /* ###### Body Text ###### */
 
 body {
-  background-color: white;
-  color: black;
   font-family: verdana, tahoma, helvetica, arial, sans-serif;
   font-size: 95%;
   margin: 0;
@@ -203,7 +201,6 @@ dd {
 }
 
 .sideBox a, .sideBox a:hover, .sideBox span {
-  color: black;
   text-decoration: none;
   line-height: 1.25em;
   display: block;

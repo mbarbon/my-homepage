@@ -11,10 +11,6 @@
             encoding="utf-8"
             />
 
-<xsl:template name="fxm">
-  <a href="#news">&#8250; News</a>
-</xsl:template>
-
 <!-- pass-through xhtml:*, stripping all tags -->
 <xsl:template match="xhtml:*">
   <xsl:apply-templates />

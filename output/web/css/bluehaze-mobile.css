@@ -1,0 +1,16 @@
+/*
+ * Blue Haze stylesheet for mobile browsers
+ */
+
+.headerTitle {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.menuBar *, .locBar * {
+  font-weight: bold;
+}
+
+#honeypot-logo, #this-page, .sideBox * #bullet, .headerRight {
+  display: none;
+}

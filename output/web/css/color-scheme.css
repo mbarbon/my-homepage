@@ -30,6 +30,12 @@ h1, q,  #header, .sideBox, .sideBox div
 q, .sideBox a, .sideBox span
 { /* Background Color (lighter): */  background-color: transparent; /* #fafcff; */ }
 
+.sideBox a, .sideBox a:hover, .sideBox span
+{ color: black; }
+
+body
+{ background-color: white; color: black; }
+
 /* ###### Special Colors ###### */
 
 acronym {
