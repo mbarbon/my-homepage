@@ -4,8 +4,27 @@
   version="1.0"
   exclude-result-prefixes="xhtml"
   xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:months="http://barbon.org/dummy/months"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<!-- taken from http://kpumuk.info/xslt/sorting-rss-feed-by-date-using-xslt/
+     and modified to suit my needs -->
+<months:months>
+  <month name="Jan" index="0" />
+  <month name="Feb" index="1" />
+  <month name="Mar" index="2" />
+  <month name="Apr" index="3" />
+  <month name="May" index="4" />
+  <month name="Jun" index="5" />
+  <month name="Jul" index="6" />
+  <month name="Aug" index="7" />
+  <month name="Sep" index="8" />
+  <month name="Oct" index="9" />
+  <month name="Nov" index="10" />
+  <month name="Dec" index="11" />
+</months:months>
+<xsl:variable name="vMonths" select="document('')/*/months:*"/>
 
 <xsl:namespace-alias stylesheet-prefix="xhtml" result-prefix="#default" />
 
@@ -230,8 +249,16 @@
 <xsl:template match="news-items">
   <dl>
     <xsl:variable name="count"><xsl:value-of select="@count" /></xsl:variable>
-    <xsl:for-each select="/data/blob/item[position() &lt;= $count]">
-      <xsl:call-template name="news-item" />
+    <xsl:for-each select="/data/blob/item">
+      <xsl:sort select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" order="descending"/>
+      <xsl:sort select="$vMonths/*[@name=substring(substring-after(substring-after(current()/date/@rfc822, ' '), ' '), 1, 3)]/@index"
+                data-type="number"
+                order="descending" />
+      <xsl:sort select="substring(substring-after(date/@rfc822, ' '), 1, 2)" data-type="number" order="descending" />
+      <xsl:sort select="substring(substring-after(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), ' '), 1, 8)" data-type="text" order="descending" />
+      <xsl:if test="position() &lt;= $count">
+        <xsl:call-template name="news-item" />
+      </xsl:if>
     </xsl:for-each>
   </dl>
 </xsl:template>
@@ -254,8 +281,16 @@
 <xsl:template match="short-news-items">
   <ul>
     <xsl:variable name="count"><xsl:value-of select="@count" /></xsl:variable>
-    <xsl:for-each select="/data/blob/item[position() &lt;= $count]">
-      <xsl:call-template name="short-news-item" />
+    <xsl:for-each select="/data/blob/item">
+      <xsl:sort select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" order="descending" />
+      <xsl:sort select="$vMonths/*[@name=substring(substring-after(substring-after(current()/date/@rfc822, ' '), ' '), 1, 3)]/@index"
+                data-type="number"
+                order="descending" />
+      <xsl:sort select="substring(substring-after(date/@rfc822, ' '), 1, 2)" data-type="number" order="descending" />
+      <xsl:sort select="substring(substring-after(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), ' '), 1, 8)" data-type="text" order="descending" />
+      <xsl:if test="position() &lt;= $count">
+        <xsl:call-template name="short-news-item" />
+      </xsl:if>
     </xsl:for-each>
   </ul>
 </xsl:template>
