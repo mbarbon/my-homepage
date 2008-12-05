@@ -3,9 +3,13 @@
 OUTDIR=output/web
 HTML=$(OUTDIR)/index.html $(OUTDIR)/personal.html $(OUTDIR)/programming.html \
      $(OUTDIR)/amilo.html $(OUTDIR)/all_news.html $(OUTDIR)/stuff.rss
+MARKDOWN=$(wildcard */*.md)
 XSLT=xsltproc --xinclude
 XSLT_SIMPLE= -o $@ simple.xsl main.xml
-ALL_FILES=*.xml *.xsl *.dtd
+ALL_FILES=*.xml *.xsl *.dtd $(patsubst %.md,%.xml,$(MARKDOWN))
+
+%.xml: %.md
+	perl process.pl $< $@
 
 all: $(HTML)
 
@@ -20,6 +24,11 @@ upload: archive
 
 crlf2lf:
 	find $(OUTDIR) -name "*.html" | xargs dos2unix
+
+markdown.xml: $(MARKDOWN)
+	perl -e 'BEGIN{print qq{<data xmlns:xi="http://www.w3.org/2001/XInclude">}};' \
+	     -e 'END{print"</data>"};' \
+	     -e 's/\.md$$/.xml/, print qq{<xi:include href="$$_" />} foreach glob "*/*.md"' > markdown.xml
 
 $(OUTDIR)/index.html:
 	$(XSLT) --stringparam itemnode home $(XSLT_SIMPLE)

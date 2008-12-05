@@ -1,3 +1,5 @@
 *~
 output/web/*.html
 output/web/*.rss
+markdown.xml
+2008/*.xml

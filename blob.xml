@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 
-<blob xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<blob xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="markdown.xml#xpointer(//data/item)" />
+
   <item>
     <title>Lost youth</title>
     <date rfc822="Sat, 22 Nov 2008 22:56:00 +0100">22 november 2008</date>
