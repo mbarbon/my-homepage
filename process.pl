@@ -29,7 +29,8 @@ sub _g {
     return $v;
 }
 
-$html =~ s[(</?)][$1xhtml:]g;
+$html =~ s[<(?!xhtml:)(\w+)][<xhtml:$1]g;
+$html =~ s[</(?!xhtml:)(\w+)][</xhtml:$1]g;
 
 $wr->xmlDecl();
 $wr->startTag( 'item', 'xmlns:xhtml' => 'http://www.w3.org/1999/xhtml' );
