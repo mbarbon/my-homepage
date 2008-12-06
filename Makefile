@@ -8,7 +8,7 @@ XSLT=xsltproc --xinclude
 XSLT_SIMPLE= -o $@ simple.xsl main.xml
 ALL_FILES=*.xml *.xsl *.dtd $(patsubst %.md,%.xml,$(MARKDOWN))
 
-%.xml: %.md
+%.xml: %.md process.pl
 	perl process.pl $< $@
 
 all: $(HTML)

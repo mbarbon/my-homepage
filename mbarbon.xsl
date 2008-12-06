@@ -204,6 +204,15 @@
   <br />
 </xsl:template>
 
+<!-- date -->
+<xsl:template name="date">
+  <xsl:value-of select="0 + substring(substring-after(date/@rfc822, ' '), 1, 2)" />
+  <xsl:value-of select="' '" />
+  <xsl:value-of select="$vMonths/*[@name=substring(substring-after(substring-after(current()/date/@rfc822, ' '), ' '), 1, 3)]/@fullname" />
+  <xsl:value-of select="' '" />
+  <xsl:value-of select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" />
+</xsl:template>
+
 <!-- list item -->
 <xsl:template match="item|subitem">
   <xsl:apply-templates />
@@ -217,7 +226,7 @@
         <xsl:attribute name="name"><xsl:copy-of select="id" /></xsl:attribute>
       </a>
     </xsl:if>
-    <xsl:value-of select="date" />
+    <xsl:call-template name="date" select="date" />
     <xsl:if test="title">
       - <xsl:value-of select="title" />
     </xsl:if>
@@ -253,7 +262,7 @@
 <!-- short news item -->
 <xsl:template name="short-news-item">
   <li>
-    <xsl:value-of select="date" />:
+    <xsl:call-template name="date" select="date" />:
     <xsl:apply-templates select="description" />
     <xsl:if test="id">
       <a>

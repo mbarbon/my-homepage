@@ -38,9 +38,8 @@ $wr->dataElement( 'title', _g( 'title' ) )
   if defined _g( 'title' );
 $wr->dataElement( 'description', _g( 'description' ) )
   if defined _g( 'description' );
-if( defined _g( 'date' ) && defined _g( 'date-rfc822' ) ) {
-    $wr->dataElement( 'date', _g( 'date' ),
-                      rfc822 => _g( 'date-rfc822' ) );
+if( defined( my $date = _g( 'date-rfc822' ) ) ) {
+    $wr->emptyTag( 'date', rfc822 => $date );
 }
 $wr->dataElement( 'id', basename( $md, '.md' ) );
 $wr->startTag( 'content' );
