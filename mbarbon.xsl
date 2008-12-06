@@ -3,11 +3,16 @@
 <xsl:stylesheet
   version="1.0"
   exclude-result-prefixes="xhtml"
+  extension-element-prefixes="date"
   xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:months="http://barbon.org/dummy/months"
+  xmlns:date="http://exslt.org/dates-and-times"
+  xmlns:months="http://barbon.org/my/months"
+  xmlns:my="http://barbon.org/my"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:import href="sort.xsl" />
 
 <xsl:variable name="vMonths" select="document('sort.xsl')/*/months:*"/>
 
@@ -214,11 +219,11 @@
 
 <!-- date -->
 <xsl:template name="date">
-  <xsl:value-of select="0 + substring(substring-after(date/@rfc822, ' '), 1, 2)" />
+  <xsl:value-of select="0 + my:day-rfc822(date)" />
   <xsl:value-of select="' '" />
-  <xsl:value-of select="$vMonths/*[@name=substring(substring-after(substring-after(current()/date/@rfc822, ' '), ' '), 1, 3)]/@fullname" />
+  <xsl:value-of select="my:longmonth-rfc822(date)" />
   <xsl:value-of select="' '" />
-  <xsl:value-of select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" />
+  <xsl:value-of select="my:year-rfc822(date)" />
 </xsl:template>
 
 <!-- list item -->
@@ -258,18 +263,8 @@
     </xsl:variable>
     <xsl:variable name="count"><xsl:value-of select="@count" /></xsl:variable>
     <xsl:for-each select="/data/blob/item">
-      <!-- xi:include href="sort.xsl#xmlns(xsl=http://www.w3.org/1999/XSL/Transform)xpointer(//xsl:stylesheet/xsl:sort)" / -->
-<xsl:sort select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" order="descending"/>
-<xsl:sort select="$vMonths/*[@name=substring(substring-after(substring-after(current()/date/@rfc822, ' '), ' '), 1, 3)]/@index"
-          data-type="number"
-          order="descending" />
-<xsl:sort select="substring(substring-after(date/@rfc822, ' '), 1, 2)" data-type="number" order="descending" />
-<xsl:sort select="substring(substring-after(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), ' '), 1, 8)" data-type="text" order="descending" />
-
-      <xsl:variable name="newsyear">
-        <xsl:value-of select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" />
-      </xsl:variable>
-      <xsl:if test="position() &lt;= $count and $year = $newsyear">
+      <xsl:sort select="my:date-rfc822(date)" order="descending" />
+      <xsl:if test="position() &lt;= $count and $year = my:year-rfc822(date/@rfc822)">
         <xsl:call-template name="news-item" />
       </xsl:if>
     </xsl:for-each>
@@ -281,12 +276,9 @@
   <li>
     <xsl:call-template name="date" select="date" />:
     <xsl:apply-templates select="description" />
-    <xsl:variable name="newsyear">
-      <xsl:value-of select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" />
-    </xsl:variable>
     <xsl:if test="id">
       <a>
-        <xsl:attribute name="href"><xsl:value-of select="$basepath" /><xsl:value-of select="$newsyear" />/stuff.html#<xsl:copy-of select="id" /></xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$basepath" /><xsl:value-of select="my:year-rfc822(date/@rfc822)" />/stuff.html#<xsl:copy-of select="id" /></xsl:attribute>
         More...
       </a>
     </xsl:if>
@@ -298,14 +290,7 @@
   <ul>
     <xsl:variable name="count"><xsl:value-of select="@count" /></xsl:variable>
     <xsl:for-each select="/data/blob/item">
-      <!-- xi:include href="sort.xsl#xmlns(xsl=http://www.w3.org/1999/XSL/Transform)xpointer(//xsl:stylesheet/xsl:sort)" / -->
-<xsl:sort select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" order="descending"/>
-<xsl:sort select="$vMonths/*[@name=substring(substring-after(substring-after(current()/date/@rfc822, ' '), ' '), 1, 3)]/@index"
-          data-type="number"
-          order="descending" />
-<xsl:sort select="substring(substring-after(date/@rfc822, ' '), 1, 2)" data-type="number" order="descending" />
-<xsl:sort select="substring(substring-after(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), ' '), 1, 8)" data-type="text" order="descending" />
-
+      <xsl:sort select="my:date-rfc822(date)" order="descending" />
       <xsl:if test="position() &lt;= $count">
         <xsl:call-template name="short-news-item" />
       </xsl:if>

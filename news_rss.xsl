@@ -3,9 +3,12 @@
 <xsl:stylesheet
   version="1.0"
   exclude-result-prefixes="xhtml"
-  xmlns:months="http://barbon.org/dummy/months"
+  xmlns:months="http://barbon.org/my/months"
+  xmlns:my="http://barbon.org/my"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:import href="sort.xsl" />
 
 <xsl:variable name="vMonths" select="document('sort.xsl')/*/months:*"/>
 
@@ -36,11 +39,8 @@
       </xsl:choose>
     </description>
     <pubDate><xsl:value-of select="date/@rfc822" /></pubDate>
-    <xsl:variable name="newsyear">
-      <xsl:value-of select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" />
-    </xsl:variable>
     <xsl:if test="id">
-      <guid>http://barbon.org/web/<xsl:value-of select="$newsyear" />/stuff.html#<xsl:value-of select="id" /></guid>
+      <guid>http://barbon.org/web/<xsl:value-of select="my:year-rfc822(date/@rfc822)" />/stuff.html#<xsl:value-of select="id" /></guid>
     </xsl:if>
   </item>
 </xsl:template>
@@ -61,14 +61,7 @@
     <webMaster>mbarbon@cpan.org</webMaster>
 
     <xsl:for-each select="/data/blob/item">
-      <!-- xi:include href="sort.xsl#xmlns(xsl=http://www.w3.org/1999/XSL/Transform)xpointer(//xsl:stylesheet/xsl:sort)" / -->
-<xsl:sort select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" order="descending"/>
-<xsl:sort select="$vMonths/*[@name=substring(substring-after(substring-after(current()/date/@rfc822, ' '), ' '), 1, 3)]/@index"
-          data-type="number"
-          order="descending" />
-<xsl:sort select="substring(substring-after(date/@rfc822, ' '), 1, 2)" data-type="number" order="descending" />
-<xsl:sort select="substring(substring-after(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), ' '), 1, 8)" data-type="text" order="descending" />
-
+      <xsl:sort select="my:date-rfc822(date)" order="descending" />
       <xsl:if test="position() &lt;= 5">
         <xsl:apply-templates select="." />
       </xsl:if>
