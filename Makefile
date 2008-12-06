@@ -2,11 +2,14 @@
 
 OUTDIR=output/web
 HTML=$(OUTDIR)/index.html $(OUTDIR)/personal.html $(OUTDIR)/programming.html \
-     $(OUTDIR)/amilo.html $(OUTDIR)/all_news.html $(OUTDIR)/stuff.rss
+     $(OUTDIR)/amilo.html $(OUTDIR)/all_news.html $(OUTDIR)/stuff.rss \
+     $(OUTDIR)/old/stuff.html $(OUTDIR)/2008/stuff.html
+
 MARKDOWN=$(wildcard */*.md)
 XSLT=xsltproc --xinclude
 XSLT_SIMPLE= -o $@ simple.xsl main.xml
 ALL_FILES=*.xml *.xsl *.dtd $(patsubst %.md,%.xml,$(MARKDOWN))
+YEAR=2008
 
 %.xml: %.md process.pl
 	perl process.pl $< $@
@@ -43,11 +46,17 @@ $(OUTDIR)/amilo.html:
 	$(XSLT) --stringparam itemnode amilo $(XSLT_SIMPLE)
 
 $(OUTDIR)/all_news.html:
-	$(XSLT) --stringparam itemnode all-news $(XSLT_SIMPLE)
+	$(XSLT) --stringparam itemnode all-news --stringparam year $(YEAR) $(XSLT_SIMPLE)
+
+$(OUTDIR)/2008/stuff.html:
+	$(XSLT) --stringparam basepath '../' --stringparam itemnode all-news --stringparam year 2008 $(XSLT_SIMPLE)
+
+$(OUTDIR)/old/stuff.html:
+	$(XSLT) --stringparam basepath '../' --stringparam itemnode old-news $(XSLT_SIMPLE)
 
 $(OUTDIR)/stuff.rss:
 	$(XSLT) -o $@ news_rss.xsl main.xml
 
 .SUFFIXES: .xml .xsl .html
 
-$(OUTDIR)/*.html $(OUTDIR)/*.rss: $(ALL_FILES) Makefile
+$(HTML): $(ALL_FILES) Makefile

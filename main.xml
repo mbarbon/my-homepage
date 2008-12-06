@@ -20,4 +20,17 @@
   </item>
 </all-news>
 
+<old-news>
+  <item>
+    <title>Old news</title>
+    <anchor>news</anchor>
+    <content>
+      <news-items count="1000" year="2007" />
+      <news-items count="1000" year="2006" />
+      <news-items count="1000" year="2005" />
+      <news-items count="1000" year="2004" />
+    </content>
+  </item>
+</old-news>
+
 </data>

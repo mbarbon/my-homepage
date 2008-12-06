@@ -6,7 +6,7 @@
     <anchor>position</anchor>
     <content>
       <xhtml:p>Since december 2005 I work for DadaMobile as a full-time employee.</xhtml:p>
-      <xhtml:p>I am still willing to accept short-term non-full-time assignments. You can find here my <xhtml:a href="../mbarbon_en.pdf">Curriculum Vitae</xhtml:a> (<xhtml:a href="../mbarbon_it.pdf">Italian version</xhtml:a>).</xhtml:p>
+      <xhtml:p>I am still willing to accept short-term non-full-time assignments. You can find here my <xhtml:a local="1" href="../mbarbon_en.pdf">Curriculum Vitae</xhtml:a> (<xhtml:a local="1" href="../mbarbon_it.pdf">Italian version</xhtml:a>).</xhtml:p>
     </content>
   </item>
 
@@ -36,7 +36,10 @@
     <anchor>news</anchor>
     <content>
       <short-news-items count="5"/>
-      <xhtml:p><xhtml:a href="all_news.html">All news...</xhtml:a></xhtml:p>
+      <xhtml:p>
+        <xhtml:a local="1" href="2008/stuff.html">2008...</xhtml:a>
+        <xhtml:a local="1" href="old/stuff.html">Old...</xhtml:a>
+      </xhtml:p>
     </content>
   </item>
 </home>

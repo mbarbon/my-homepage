@@ -27,13 +27,13 @@ You can find <xhtml:a href="http://wxperl.eu/ipw2008/">slides and example code</
 
   <item>
     <date rfc822="Sat, 17 Feb 2007 00:00:00 +0100" />
-    <description>finally updated my <xhtml:a href="personal.html#reading">reading page</xhtml:a></description>
+    <description>finally updated my <xhtml:a local="1" href="personal.html#reading">reading page</xhtml:a></description>
   </item>
 
   <item>
     <date rfc822="Mon, 02 Oct 2006 00:00:00 +0200" />
     <description>
-      <xhtml:a href="../mbarbon_en.pdf">CV</xhtml:a> updated to the Europass format
+      <xhtml:a local="1" href="../mbarbon_en.pdf">CV</xhtml:a> updated to the Europass format
     </description>
   </item>
 
@@ -44,7 +44,7 @@ You can find <xhtml:a href="http://wxperl.eu/ipw2008/">slides and example code</
 
   <item>
     <date rfc822="Thu, 24 Nov 2005 00:00:00 +0100" />
-    <description>I created a page about <xhtml:a href="amilo.html">installing Linux on Fujitsu-Siemens A7645</xhtml:a></description>
+    <description>I created a page about <xhtml:a local="1" href="amilo.html">installing Linux on Fujitsu-Siemens A7645</xhtml:a></description>
   </item>
 
   <item>

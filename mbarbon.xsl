@@ -40,6 +40,14 @@
 <!-- XHTML 1.0 strict does not have target attribute in <a> -->
 <xsl:template match="xhtml:a">
   <xsl:choose>
+    <xsl:when test="@local">
+      <a>
+        <xsl:attribute name="href">
+          <xsl:value-of select="$basepath" /><xsl:value-of select="@href" /></xsl:attribute>
+        <xsl:copy-of
+         select="child::node()|@*[local-name()!='href']" />
+      </a>
+    </xsl:when>
     <xsl:when test="@target">
       <a xsl:use-attribute-sets="a-target"><xsl:copy-of
          select="child::node()|@*[local-name()!='target']" /></a>
@@ -106,14 +114,12 @@
 
 <xsl:template name="project-honeypot">
   <xhtml:a id="honeypot-logo" href="http://www.projecthoneypot.org?rf=46311">
-    <xhtml:img src="../mini_phpot_link.gif" height="31px" width="88px" alt="Stop Spam Harvesters, Join Project Honey Pot" />
+    <xhtml:img src="{$basepath}../mini_phpot_link.gif" height="31px" width="88px" alt="Stop Spam Harvesters, Join Project Honey Pot" />
   </xhtml:a>
 </xsl:template>
 
 <!-- templates for header and footer -->
 <xsl:template name="mbarbon-header">
-  <xsl:param name="path" select="'.'" />
-
   <div id="top"></div>
 
   <div id="header">
@@ -121,9 +127,9 @@
     <span class="headerTitle">Mattia Barbon</span>
 
     <div class="menuBar">
-      <a href="{$path}/index.html">Home</a>|
-      <a href="{$path}/programming.html">Programming</a>|
-      <a href="{$path}/personal.html">Personal</a>
+      <a href="{$basepath}index.html">Home</a>|
+      <a href="{$basepath}programming.html">Programming</a>|
+      <a href="{$basepath}personal.html">Personal</a>
     </div>
   </div>
 </xsl:template>
@@ -148,6 +154,8 @@
   <p />
 </xsl:template>
 
+<xsl:variable name="basepath" />
+
 <!-- root template, generates header and footer -->
 <xsl:template match="/">
 <html xml:lang="en">
@@ -158,10 +166,10 @@
     <meta name="description" content="Mattia Barbon home page" />
     <meta name="keywords" content="Mattia Barbon home page" />
     <meta name="verify-v1" content="DB9W6kq1fB+DDEO3OV2hrHbQGrYcXSSs/Xg+oEAN5Xo=" />
-    <link rel="stylesheet" type="text/css" href="css/bluehaze-mobile.css" title="Blue Haze stylesheet" media="handheld" />
-    <link rel="stylesheet" type="text/css" href="css/bluehaze.css" title="Blue Haze stylesheet" media="tv,projection,print,screen" />
-    <link rel="stylesheet" type="text/css" href="css/color-scheme.css" title="Blue Haze stylesheet" media="all" />
-    <link href="stuff.rss" rel="alternate"
+    <link rel="stylesheet" type="text/css" href="{$basepath}css/bluehaze-mobile.css" title="Blue Haze stylesheet" media="handheld" />
+    <link rel="stylesheet" type="text/css" href="{$basepath}css/bluehaze.css" title="Blue Haze stylesheet" media="tv,projection,print,screen" />
+    <link rel="stylesheet" type="text/css" href="{$basepath}css/color-scheme.css" title="Blue Haze stylesheet" media="all" />
+    <link href="{$basepath}stuff.rss" rel="alternate"
           type="application/rss+xml" title="Stuff happens" />
     <title>Mattia Barbon</title>
   </head>
@@ -242,6 +250,12 @@
 <!-- insert full news list -->
 <xsl:template match="news-items">
   <dl>
+    <xsl:variable name="year">
+      <xsl:choose>
+        <xsl:when test="@year"><xsl:value-of select="@year" /></xsl:when>
+        <xsl:otherwise><xsl:value-of select="$year" /></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:variable name="count"><xsl:value-of select="@count" /></xsl:variable>
     <xsl:for-each select="/data/blob/item">
       <!-- xi:include href="sort.xsl#xmlns(xsl=http://www.w3.org/1999/XSL/Transform)xpointer(//xsl:stylesheet/xsl:sort)" / -->
@@ -252,7 +266,10 @@
 <xsl:sort select="substring(substring-after(date/@rfc822, ' '), 1, 2)" data-type="number" order="descending" />
 <xsl:sort select="substring(substring-after(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), ' '), 1, 8)" data-type="text" order="descending" />
 
-      <xsl:if test="position() &lt;= $count">
+      <xsl:variable name="newsyear">
+        <xsl:value-of select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" />
+      </xsl:variable>
+      <xsl:if test="position() &lt;= $count and $year = $newsyear">
         <xsl:call-template name="news-item" />
       </xsl:if>
     </xsl:for-each>
@@ -264,9 +281,12 @@
   <li>
     <xsl:call-template name="date" select="date" />:
     <xsl:apply-templates select="description" />
+    <xsl:variable name="newsyear">
+      <xsl:value-of select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" />
+    </xsl:variable>
     <xsl:if test="id">
       <a>
-        <xsl:attribute name="href">all_news.html#<xsl:copy-of select="id" /></xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$basepath" /><xsl:value-of select="$newsyear" />/stuff.html#<xsl:copy-of select="id" /></xsl:attribute>
         More...
       </a>
     </xsl:if>

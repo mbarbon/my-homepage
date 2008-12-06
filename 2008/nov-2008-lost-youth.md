@@ -11,7 +11,7 @@ modules, the technical manual of the 386 (plain text, with ASCII-art
 graphs!) and assorted stuff, it contains the very first C/C++/Assembly
 programs I wrote back in '96-'97.
 
-So [here it is](julia/) the one I was most
+So <a local="1" href="julia">here it is</a> the one I was most
 proud of: 255 bytes displaying an animation of the
 <a target="_blank" href="http://en.wikipedia.org/wiki/Julia_set">Julia set</a>.
 It ran pretty smooth back then, under DOS, on my Pentium 100,

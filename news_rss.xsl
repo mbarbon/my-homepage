@@ -36,8 +36,11 @@
       </xsl:choose>
     </description>
     <pubDate><xsl:value-of select="date/@rfc822" /></pubDate>
+    <xsl:variable name="newsyear">
+      <xsl:value-of select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" />
+    </xsl:variable>
     <xsl:if test="id">
-      <guid>http://barbon.org/web/all_news.html#<xsl:value-of select="id" /></guid>
+      <guid>http://barbon.org/web/<xsl:value-of select="$newsyear" />/stuff.html#<xsl:value-of select="id" /></guid>
     </xsl:if>
   </item>
 </xsl:template>
@@ -57,7 +60,7 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
 
-    <xsl:for-each select="/data/blob">
+    <xsl:for-each select="/data/blob/item">
       <!-- xi:include href="sort.xsl#xmlns(xsl=http://www.w3.org/1999/XSL/Transform)xpointer(//xsl:stylesheet/xsl:sort)" / -->
 <xsl:sort select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" order="descending"/>
 <xsl:sort select="$vMonths/*[@name=substring(substring-after(substring-after(current()/date/@rfc822, ' '), ' '), 1, 3)]/@index"
@@ -66,8 +69,8 @@
 <xsl:sort select="substring(substring-after(date/@rfc822, ' '), 1, 2)" data-type="number" order="descending" />
 <xsl:sort select="substring(substring-after(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), ' '), 1, 8)" data-type="text" order="descending" />
 
-      <xsl:if test="position() &lt;= 10">
-        <xsl:apply-templates />
+      <xsl:if test="position() &lt;= 5">
+        <xsl:apply-templates select="." />
       </xsl:if>
     </xsl:for-each>
   </channel>
