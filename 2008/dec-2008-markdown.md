@@ -1,5 +1,4 @@
 Title: Markdown
-Date: 04 december 2008
 Date-Rfc822: Thu, 04 Dec 2008 23:12:00 +0100
 Description: Added Markdown support
 

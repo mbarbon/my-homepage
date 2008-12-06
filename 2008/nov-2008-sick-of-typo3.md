@@ -1,5 +1,4 @@
 Title: Got sick of Typo 3
-Date: 17 november 2008
 Date-Rfc822: Mon, 17 Nov 2008 13:48:18 +0100
 Description: Finally switched the site from Typo 3.
 

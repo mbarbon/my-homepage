@@ -1,5 +1,4 @@
 Title: Lost youth
-Date: 22 november 2008
 Date-Rfc822: Sat, 22 Nov 2008 22:56:00 +0100
 Description: Found a piece of my youth I had forgot.
 
