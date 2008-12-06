@@ -3,8 +3,11 @@
 <xsl:stylesheet
   version="1.0"
   exclude-result-prefixes="xhtml"
+  xmlns:months="http://barbon.org/dummy/months"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:variable name="vMonths" select="document('sort.xsl')/*/months:*"/>
 
 <xsl:output method="xml"
             indent="yes"
@@ -54,7 +57,19 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
 
-    <xsl:apply-templates select="/data/blob/item[position() &lt; 10]"/>
+    <xsl:for-each select="/data/blob">
+      <!-- xi:include href="sort.xsl#xmlns(xsl=http://www.w3.org/1999/XSL/Transform)xpointer(//xsl:stylesheet/xsl:sort)" / -->
+<xsl:sort select="substring(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), 1, 4)" order="descending"/>
+<xsl:sort select="$vMonths/*[@name=substring(substring-after(substring-after(current()/date/@rfc822, ' '), ' '), 1, 3)]/@index"
+          data-type="number"
+          order="descending" />
+<xsl:sort select="substring(substring-after(date/@rfc822, ' '), 1, 2)" data-type="number" order="descending" />
+<xsl:sort select="substring(substring-after(substring-after(substring-after(substring-after(date/@rfc822, ' '), ' '), ' '), ' '), 1, 8)" data-type="text" order="descending" />
+
+      <xsl:if test="position() &lt;= 10">
+        <xsl:apply-templates />
+      </xsl:if>
+    </xsl:for-each>
   </channel>
 </rss>
 </xsl:template>
