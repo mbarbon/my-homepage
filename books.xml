@@ -2,12 +2,34 @@
 <!DOCTYPE data SYSTEM "entities.dtd">
 
 <books xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- 2008 -->
-  <book author="Philip K. Dick"
-        title="A Maze of Death"
+  <book author="Cesare Pavese"
+        title="La luna e i fal&ograve;"
         read="reading"
         />
 
+  <!-- 2009 -->
+  <book author="Ray Bradbury"
+        title="Tangerine"
+        read="2009"
+        />
+
+  <!-- 2008 -->
+  <book author="Sara Shepard"
+        title="Pretty Little Liars"
+        read="2008"
+        />
+  <book author="Charles Dickens"
+        title="Oliver Twist"
+        read="2008"
+        />
+  <book author="Erlend Loe"
+        title="Tutto sulla Finlandia"
+        read="2008"
+        />
+  <book author="Philip K. Dick"
+        title="A Maze of Death"
+        read="2008"
+        />
   <book author="Simone de Beauvoir"
         title="Une mort tr&egrave;s douce"
         read="2008"

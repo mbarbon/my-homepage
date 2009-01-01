@@ -15,6 +15,7 @@
     <anchor>reading</anchor>
     <content>
       <book-items read_in="reading" title="Now reading" />
+      <book-items read_in="2009" title="2009" />
       <book-items read_in="2008" title="2008" />
       <book-items read_in="2007" title="2007" />
       <book-items read_in="2006" title="2006" />
