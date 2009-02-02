@@ -2,12 +2,44 @@
 <!DOCTYPE data SYSTEM "entities.dtd">
 
 <books xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <book author="Cesare Pavese"
-        title="La luna e i fal&ograve;"
+  <book author="Raymond Queneau"
+        title="Les fleurs bleues"
+        read="to-read"
+        />
+  <book author="James Joyce"
+        title="Gente di Dublino"
+        read="to-read"
+        />
+  <book author="Marguerite Duras"
+        title="Il dolore"
+        read="to-read"
+        />
+  <book author="Jack Kerouac"
+        title="Sulla strada"
+        read="to-read"
+        />
+  <book author="Daniel Pennac"
+        title="La lunga notte del dottor Galvan"
         read="reading"
         />
 
   <!-- 2009 -->
+  <book author="Daniel Pennac"
+        title="La petite marchande de prose"
+        read="2008"
+        />
+  <book author="Gabriel Garc&iacute;a M&aacute;rquez"
+        title="L'amore ai tempi del colera"
+        read="2009"
+        />
+  <book author="Am&eacute;lie Nothomb"
+        title="Mercure"
+        read="2009"
+        />
+  <book author="Cesare Pavese"
+        title="La luna e i fal&ograve;"
+        read="2009"
+        />
   <book author="Ray Bradbury"
         title="Tangerine"
         read="2009"
@@ -158,6 +190,10 @@
         />
   <book author="Oscar WIlde"
         title="Complete Short Fiction"
+        read="2007"
+        />
+  <book author="Gabriel Garc&iacute;a M&aacute;rquez"
+        title="Cent'anni di solitudine"
         read="2007"
         />
   <book author="Jorge Luis Borges"
