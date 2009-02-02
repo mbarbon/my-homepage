@@ -16,8 +16,10 @@
   <xsl:call-template name="project-honeypot" />
 </xsl:template>
 
-<xsl:template match="/data/*[name() = $itemnode]">
-  <xsl:apply-templates />
+<xsl:template match="/data/*">
+  <xsl:if test="name() = $itemnode">
+    <xsl:apply-templates />
+  </xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>

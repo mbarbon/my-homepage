@@ -160,6 +160,7 @@
 </xsl:template>
 
 <xsl:variable name="basepath" />
+<xsl:variable name="itemnode" />
 
 <!-- root template, generates header and footer -->
 <xsl:template match="/">
