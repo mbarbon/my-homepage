@@ -13,18 +13,18 @@
 <!-- taken from http://kpumuk.info/xslt/sorting-rss-feed-by-date-using-xslt/
      and modified to suit my needs -->
 <months:months>
-  <month name="Jan" index="01" fullname="january" />
-  <month name="Feb" index="02" fullname="february" />
-  <month name="Mar" index="03" fullname="march" />
-  <month name="Apr" index="04" fullname="april" />
-  <month name="May" index="05" fullname="may" />
-  <month name="Jun" index="06" fullname="june" />
-  <month name="Jul" index="07" fullname="july" />
-  <month name="Aug" index="08" fullname="august" />
-  <month name="Sep" index="09" fullname="september" />
-  <month name="Oct" index="10" fullname="october" />
-  <month name="Nov" index="11" fullname="november" />
-  <month name="Dec" index="12" fullname="december" />
+  <month name="Jan" index="01" fullname="January" />
+  <month name="Feb" index="02" fullname="February" />
+  <month name="Mar" index="03" fullname="March" />
+  <month name="Apr" index="04" fullname="April" />
+  <month name="May" index="05" fullname="May" />
+  <month name="Jun" index="06" fullname="June" />
+  <month name="Jul" index="07" fullname="July" />
+  <month name="Aug" index="08" fullname="August" />
+  <month name="Sep" index="09" fullname="September" />
+  <month name="Oct" index="10" fullname="October" />
+  <month name="Nov" index="11" fullname="November" />
+  <month name="Dec" index="12" fullname="December" />
 </months:months>
 
 <xsl:variable name="vMonths" select="document('')/*/months:*"/>
