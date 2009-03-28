@@ -25,9 +25,10 @@
     <anchor>contact</anchor>
     <content>
       <xhtml:p>You can mail me at <xhtml:a href="mailto:mattia.barbon@libero.it">mattia.barbon at libero dot it</xhtml:a>, <xhtml:a href="mailto:mbarbon@cpan.org">mbarbon at cpan dot org</xhtml:a> and <xhtml:a href="mailto:mbarbon@users.sourceforge.net">mbarbon at users dot sourceforge dot net</xhtml:a>.<xhtml:br />
-      <xhtml:b>Skype</xhtml:b>: mattia.barbon.<xhtml:br />
-      <xhtml:b>Yahoo! Messenger</xhtml:b>: mattiabarbon.<xhtml:br />
-      <xhtml:b>MSN Messenger</xhtml:b>: mbarbon@cpan.org.<xhtml:br /></xhtml:p>
+      <xhtml:b>Skype</xhtml:b>: mattia.barbon<xhtml:br />
+      <xhtml:b>Jabber/Google Talk</xhtml:b>: mattia.barbon@jabber.org<xhtml:br />
+      <xhtml:b>Yahoo! Messenger</xhtml:b>: mattiabarbon<xhtml:br />
+      <xhtml:b>MSN Messenger</xhtml:b>: mbarbon@cpan.org<xhtml:br /></xhtml:p>
     </content>
   </item>
 
