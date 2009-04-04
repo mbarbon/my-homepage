@@ -10,10 +10,13 @@ use File::Basename qw(basename);
 
 my( $md, $out ) = @ARGV;
 my $parser = MIME::Parser->new;
+# avoid temporary files
 $parser->output_to_core( 1 );
+$parser->tmp_to_core( 1 );
 my $entity = $parser->parse_open( $md );
 my $head = $entity->head;
 my $xml;
+# convert body to markdown
 my $html = markdown( join '', @{$entity->body} );
 my $wr = XML::Writer->new
              ( OUTPUT => \$xml,
@@ -22,6 +25,7 @@ my $wr = XML::Writer->new
                DATA_INDENT => 2,
                );
 
+# get a header value without trailing newline
 sub _g {
     my $v = $head->get( $_[0] );
     chomp $v if defined $v;
@@ -29,6 +33,7 @@ sub _g {
     return $v;
 }
 
+# add xhtml: namespace prefix to markdown-generated HTML
 $html =~ s[<(?!xhtml:)(\w+)][<xhtml:$1]g;
 $html =~ s[</(?!xhtml:)(\w+)][</xhtml:$1]g;
 

@@ -256,6 +256,8 @@
 <!-- insert full news list -->
 <xsl:template match="news-items">
   <dl>
+    <!-- use either the year attribute in news-items or the command-line
+         parameter -->
     <xsl:variable name="year">
       <xsl:choose>
         <xsl:when test="@year"><xsl:value-of select="@year" /></xsl:when>
