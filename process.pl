@@ -46,6 +46,9 @@ $wr->dataElement( 'description', _g( 'description' ) )
 if( defined( my $date = _g( 'date-rfc822' ) ) ) {
     $wr->emptyTag( 'date', rfc822 => $date );
 }
+foreach my $tag ( split ' ', ( _g( 'tags' ) || '' ) ) {
+    $wr->emptyTag( 'tag', name => $tag );
+}
 $wr->dataElement( 'id', basename( $md, '.md' ) );
 $wr->startTag( 'content' );
 $wr->raw( $html );

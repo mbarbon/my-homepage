@@ -2,7 +2,9 @@
 
 <xsl:stylesheet
   version="1.0"
+  extension-element-prefixes="exsl-common"
   exclude-result-prefixes="xhtml"
+  xmlns:exsl-common="http://exslt.org/common"
   xmlns:months="http://barbon.org/my/months"
   xmlns:my="http://barbon.org/my"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
@@ -11,6 +13,18 @@
 <xsl:import href="sort.xsl" />
 
 <xsl:variable name="vMonths" select="document('sort.xsl')/*/months:*"/>
+
+<xsl:param name="tag" />
+<xsl:variable name="vItems">
+<xsl:choose>
+  <xsl:when test="$tag != 'all'">
+    <xsl:copy-of select="/data/blob/item[tag/@name=$tag]" />
+  </xsl:when>
+  <xsl:otherwise>
+    <xsl:copy-of select="/data/blob/item" />
+  </xsl:otherwise>
+</xsl:choose>
+</xsl:variable>
 
 <xsl:output method="xml"
             indent="yes"
@@ -60,7 +74,7 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
 
-    <xsl:for-each select="/data/blob/item">
+    <xsl:for-each select="exsl-common:node-set($vItems)/item">
       <xsl:sort select="my:date-rfc822(date)" order="descending" />
       <xsl:if test="position() &lt;= 5">
         <xsl:apply-templates select="." />
