@@ -14,6 +14,13 @@ YEAR=2008
 %.xml: %.md process.pl
 	perl process.pl $< $@
 
+$(OUTDIR)/%/stuff.html:
+	$(XSLT) --stringparam basepath '../' --stringparam itemnode all-news --stringparam year $* $(XSLT_SIMPLE)
+
+$(OUTDIR)/%.html: NODE=$*
+$(OUTDIR)/%.html:
+	$(XSLT) --stringparam itemnode $(NODE) $(XSLT_SIMPLE)
+
 all: $(HTML)
 
 clean:
@@ -33,23 +40,10 @@ markdown.xml: $(MARKDOWN)
 	     -e 'END{print"</data>"};' \
 	     -e 's/\.md$$/.xml/, print qq{<xi:include href="$$_" />} foreach glob "*/*.md"' > markdown.xml
 
-$(OUTDIR)/index.html:
-	$(XSLT) --stringparam itemnode home $(XSLT_SIMPLE)
-
-$(OUTDIR)/personal.html:
-	$(XSLT) --stringparam itemnode personal $(XSLT_SIMPLE)
-
-$(OUTDIR)/programming.html:
-	$(XSLT) --stringparam itemnode programming $(XSLT_SIMPLE)
-
-$(OUTDIR)/amilo.html:
-	$(XSLT) --stringparam itemnode amilo $(XSLT_SIMPLE)
+$(OUTDIR)/index.html: NODE=home
 
 $(OUTDIR)/all_news.html:
 	$(XSLT) --stringparam itemnode all-news --stringparam year $(YEAR) $(XSLT_SIMPLE)
-
-$(OUTDIR)/2008/stuff.html:
-	$(XSLT) --stringparam basepath '../' --stringparam itemnode all-news --stringparam year 2008 $(XSLT_SIMPLE)
 
 $(OUTDIR)/old/stuff.html:
 	$(XSLT) --stringparam basepath '../' --stringparam itemnode old-news $(XSLT_SIMPLE)
