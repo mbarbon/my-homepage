@@ -50,7 +50,7 @@
 <rss version="2.0">
   <channel>
     <title>Stuff happens</title>
-    <link>http://barbon.org/web/</link>
+    <link>http://barbon.org/web/all_news.html</link>
     <description>Assorted news items</description>
     <language>en-us</language>
     <!-- pubDate>Tue, 10 Jun 2003 04:00:00 GMT</pubDate -->
