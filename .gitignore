@@ -4,5 +4,5 @@ output/web/*.rss
 output/web/old
 markdown.xml
 web.tar.bz2
-output/web/2008
-2008/*.xml
+output/web/20??
+20??/*.xml
