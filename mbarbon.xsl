@@ -177,6 +177,8 @@
     <link rel="stylesheet" type="text/css" href="{$basepath}css/color-scheme.css" title="Blue Haze stylesheet" media="all" />
     <link href="{$basepath}stuff.rss" rel="alternate"
           type="application/rss+xml" title="Stuff happens" />
+    <link href="{$basepath}perl.rss" rel="alternate"
+          type="application/rss+xml" title="Stuff happens (Perl)" />
     <title>Mattia Barbon</title>
   </head>
 
