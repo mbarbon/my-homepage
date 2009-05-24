@@ -1,7 +1,7 @@
 Title: It's more complicated than you think
 Date-Rfc822: Sun, 05 Apr 2009 21:39:20 +0200
 Description: A 5-minute fix that did not take 5 minutes
-Tag: perl
+Tags: perl
 
 Today, after two weeks, I looked at my wxPerl inbox and found a bug
 report (with patch!) to make <a
