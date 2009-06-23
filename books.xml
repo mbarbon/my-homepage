@@ -10,12 +10,40 @@
         title="Gente di Dublino"
         read="reading"
         />
-  <book author="Marguerite Duras"
-        title="Il dolore"
-        read="reading"
+  <book author="Ernest Hemingway"
+        title="To Have and Have Not"
+        read="to-read"
+        />
+  <book author="D. H. Lawrence"
+        title="Lady Chatterley's Lover"
+        read="to-read"
         />
 
   <!-- 2009 -->
+  <book author="Bj&ouml;rn Larsson"
+        title="La vera storia del pirata Long John Silver"
+        read="2009"
+        />
+  <book author="Sophie Kinsella"
+        title="Confessions of a Shopaholic"
+        read="2009"
+        />
+  <book author="Vasco Pratolini"
+        title="Le ragazze di Sanfrediano"
+        read="2009"
+        />
+  <book author="Andr&eacute; Gide"
+        title="Les faux-monnayeurs"
+        read="2009"
+        />
+  <book author="Marguerite Duras"
+        title="Il dolore"
+        read="2009"
+        />
+  <book author="Harry Turtledove"
+        title="The Gladiator"
+        read="2009"
+        />
   <book author="Stephenie Meyer"
         title="New moon"
         read="2009"
