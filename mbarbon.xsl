@@ -50,7 +50,8 @@
         <xsl:attribute name="href">
           <xsl:value-of select="$basepath" /><xsl:value-of select="@href" /></xsl:attribute>
         <xsl:copy-of
-         select="child::node()|@*[local-name()!='href']" />
+         select="child::node()|@*[    local-name()!='href'
+                                  and local-name()!='local']" />
       </a>
     </xsl:when>
     <xsl:when test="@target">
