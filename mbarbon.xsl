@@ -118,9 +118,9 @@
 </xsl:template>
 
 <xsl:template name="project-honeypot">
-  <xhtml:a id="honeypot-logo" href="http://www.projecthoneypot.org?rf=46311">
-    <xhtml:img src="{$basepath}../mini_phpot_link.gif" height="31px" width="88px" alt="Stop Spam Harvesters, Join Project Honey Pot" />
-  </xhtml:a>
+  <a id="honeypot-logo" href="http://www.projecthoneypot.org?rf=46311">
+    <img src="{$basepath}../mini_phpot_link.gif" height="31px" width="88px" alt="Stop Spam Harvesters, Join Project Honey Pot" />
+  </a>
 </xsl:template>
 
 <!-- templates for header and footer -->
