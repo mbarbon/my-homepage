@@ -6,7 +6,6 @@
     <anchor>position</anchor>
     <content>
       <xhtml:p>Since February 2009 I work for Develer as a full-time employee.</xhtml:p>
-      <xhtml:p>I am still willing to accept short-term non-full-time assignments. You can find here my <xhtml:a local="1" href="../mbarbon_en.pdf">Curriculum Vitae</xhtml:a> (<xhtml:a local="1" href="../mbarbon_it.pdf">Italian version</xhtml:a>).</xhtml:p>
     </content>
   </item>
 
@@ -17,6 +16,7 @@
       <xhtml:p>I was born in Treviso (Italy, near Venice) January the 8th, 1979.</xhtml:p>
       <xhtml:p>I obtained the &quot;Laurea Specialistica in Informatica&quot;, roughly equivalent to a MSc in Computer Science, October the 10th, 2003.</xhtml:p>
       <xhtml:p>I work in IT as a developer. In my free time (which is becoming less and less...) I participate to various Open Source projects.</xhtml:p>
+      <xhtml:p><xhtml:a local="1" href="../mbarbon_en.pdf">Curriculum Vitae</xhtml:a> (<xhtml:a local="1" href="../mbarbon_it.pdf">Italian version</xhtml:a>).</xhtml:p>
       </content>
   </item>
 
