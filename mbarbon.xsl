@@ -129,13 +129,15 @@
   <div id="top"></div>
 
   <div id="header">
-    <span class="headerRight">MSc in Computer Science<br /><a href="mailto:mattia.barbon@libero.it">mattia.barbon@libero.it</a></span>
-    <span class="headerTitle">Mattia Barbon</span>
+    <div class="headerRight">MSc in Computer Science<br /><a href="mailto:mattia.barbon@libero.it">mattia.barbon@libero.it</a></div>
+    <div class="headerLeft">
+      <span class="headerTitle">Mattia Barbon</span>
 
-    <div class="menuBar">
-      <a href="{$basepath}index.html">Home</a>|
-      <a href="{$basepath}programming.html">Programming</a>|
-      <a href="{$basepath}personal.html">Personal</a>
+      <div class="menuBar">
+        <a href="{$basepath}index.html">Home</a>|
+        <a href="{$basepath}programming.html">Programming</a>|
+        <a href="{$basepath}personal.html">Personal</a>
+      </div>
     </div>
   </div>
 </xsl:template>
